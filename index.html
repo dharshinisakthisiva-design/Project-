@@ -1,0 +1,428 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A. Dharshini | Student Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f7ff;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #101b3d;
+            color: white;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        header h2 {
+            color: #70e1f5;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 18px;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #70e1f5;
+        }
+
+        .hero {
+            min-height: 420px;
+            background: linear-gradient(135deg, #101b3d, #364fc7);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 65px 20px;
+        }
+
+        .hero .tag {
+            color: #70e1f5;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .hero h1 {
+            font-size: clamp(34px, 6vw, 55px);
+            margin: 12px 0;
+        }
+
+        .hero h3 {
+            font-size: 22px;
+            font-weight: normal;
+        }
+
+        .hero p {
+            max-width: 600px;
+            margin: 15px 0 25px;
+            color: #e4eaff;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #70e1f5;
+            color: #101b3d;
+            padding: 12px 24px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        section {
+            padding: 55px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            color: #263e9c;
+            font-size: 30px;
+            margin-bottom: 30px;
+        }
+
+        .about {
+            max-width: 850px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns:
+                repeat(auto-fit, minmax(220px, 1fr));
+            gap: 22px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 14px;
+            box-shadow: 0 5px 18px #17255412;
+            border-top: 4px solid #5269df;
+        }
+
+        .card h3 {
+            color: #263e9c;
+            margin-bottom: 12px;
+        }
+
+        .card p, .card li {
+            color: #555;
+            font-size: 15px;
+        }
+
+        .card ul {
+            padding-left: 20px;
+        }
+
+        .marks {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+        }
+
+        .mark-box {
+            background: white;
+            text-align: center;
+            padding: 25px 45px;
+            border-radius: 14px;
+            box-shadow: 0 5px 18px #17255412;
+        }
+
+        .mark-box h3 {
+            color: #263e9c;
+        }
+
+        .mark-box .score {
+            font-size: 32px;
+            font-weight: bold;
+            color: #364fc7;
+            margin-top: 8px;
+        }
+
+        .project {
+            max-width: 750px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 14px;
+            box-shadow: 0 5px 18px #17255412;
+            border-left: 5px solid #5269df;
+        }
+
+        .project h3 {
+            color: #263e9c;
+            margin-bottom: 12px;
+        }
+
+        .project-label {
+            display: inline-block;
+            background: #e6eaff;
+            color: #263e9c;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 13px;
+            margin: 12px 0;
+        }
+
+        .contact {
+            background: #101b3d;
+            color: white;
+            text-align: center;
+        }
+
+        .contact .section-title {
+            color: #70e1f5;
+        }
+
+        .contact a {
+            color: #70e1f5;
+            text-decoration: none;
+            overflow-wrap: anywhere;
+        }
+
+        footer {
+            background: #091129;
+            color: #ccd3e9;
+            text-align: center;
+            padding: 18px;
+            font-size: 14px;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                justify-content: center;
+                text-align: center;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 5px 8px;
+            }
+
+            section {
+                padding: 40px 6%;
+            }
+
+            .mark-box {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <h2>Dharshini.</h2>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#education">Education</a>
+            <a href="#project">Project</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section class="hero" id="home">
+        <span class="tag">STUDENT PORTFOLIO</span>
+
+        <h1>Hi, I'm A. Dharshini</h1>
+
+        <h3>Aspiring IT Professional</h3>
+
+        <p>
+            I am a first-year B.Sc. Computer Science student
+            at Bishop Heber College. I am passionate about
+            technology, Python programming, and problem-solving.
+            I am continuously learning new skills to build
+            my future in the IT industry.
+        </p>
+
+        <a href="#about" class="btn">Explore My Portfolio</a>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2 class="section-title">About Me</h2>
+
+        <div class="about">
+            <p>
+                My name is A. Dharshini. I am currently pursuing
+                B.Sc. Computer Science at Bishop Heber College
+                from 2026 to 2029.
+
+                I have basic knowledge of Python programming
+                and a strong interest in problem-solving.
+                I am currently improving my technical knowledge,
+                communication, teamwork, and other professional
+                skills. My goal is to become a successful
+                IT professional.
+            </p>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2 class="section-title">My Skills</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Core Technical Skills</h3>
+                <ul>
+                    <li>Python Programming</li>
+                    <li>Problem-Solving</li>
+                    <li>Programming Fundamentals</li>
+                    <li>Data Structures - Learning</li>
+                    <li>SQL and Databases - Learning</li>
+                    <li>Web Development - Learning</li>
+                    <li>Debugging and Testing - Learning</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>Workplace & Soft Skills</h3>
+                <ul>
+                    <li>Communication Skills</li>
+                    <li>Teamwork and Collaboration</li>
+                    <li>Time Management</li>
+                    <li>Adaptability</li>
+                    <li>Critical Thinking</li>
+                    <li>Continuous Learning</li>
+                    <li>Professional Responsibility</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education">
+        <h2 class="section-title">Education & Marks</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>College</h3>
+                <p><strong>Bishop Heber College</strong></p>
+                <p>B.Sc. Computer Science</p>
+                <p>2026 – 2029</p>
+                <p>First Year Student</p>
+            </div>
+
+        </div>
+
+        <div class="marks" style="margin-top: 25px;">
+
+            <div class="mark-box">
+                <h3>10th Standard</h3>
+                <div class="score">343</div>
+                <p>Total Marks</p>
+            </div>
+
+            <div class="mark-box">
+                <h3>12th Standard</h3>
+                <div class="score">347</div>
+                <p>Total Marks</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- First Project -->
+    <section id="project">
+        <h2 class="section-title">My First Project</h2>
+
+        <div class="project">
+            <span class="project-label">Project 01</span>
+
+            <h3>Student Management System</h3>
+
+            <p>
+                The Student Management System is my first project.
+                Its purpose is to organize and manage student
+                information in a simple and efficient way.
+            </p>
+
+            <br>
+
+            <p><strong>Project Objectives:</strong></p>
+
+            <ul>
+                <li>Store student details.</li>
+                <li>Display student information.</li>
+                <li>Organize academic records.</li>
+                <li>Make student data easier to manage.</li>
+            </ul>
+
+            <br>
+
+            <p>
+                <strong>Technology:</strong> Python
+                <br>
+                <strong>Status:</strong> Student project
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <h2 class="section-title">Contact Me</h2>
+
+        <p>
+            I am eager to learn, improve my skills,
+            and explore opportunities in the IT field.
+        </p>
+
+        <br>
+
+        <p>
+            <strong>Name:</strong> A. Dharshini
+        </p>
+
+        <p>
+            <strong>Email:</strong>
+            <a href="mailto:dharshinisakthisiva@gmail.com">
+                dharshinisakthisiva@gmail.com
+            </a>
+        </p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>
+            © 2026 A. Dharshini | Student Portfolio
+        </p>
+        <p>Designed with HTML and CSS</p>
+    </footer>
+
+</body>
+</html>
